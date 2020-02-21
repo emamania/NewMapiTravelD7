@@ -145,7 +145,7 @@
 <div class="movie">
     <div class="overlay">
         <video class="video-agencia" width="100%" preload="auto" autoplay="true" muted="muted" loop="" playsinline="">
-            <source class="main-video" src="./sites/all/themes/newqelluchaska/assets/images/videopromo.mp4" type="video/mp4">
+            <source class="main-video" src="./sites/all/themes/NewMapiTravelD7/newqelluchaska/assets/images/videopromo.mp4" type="video/mp4">
         </video>
     </div>
     <div class="movie_text">
@@ -183,7 +183,7 @@
           </div>
           <div class="lg-cols-3 md-cols-12">
             <div class="md-cols-12">
-              <?php print render($page['video']); ?>                                         
+              <?php print render($page['aside']); ?>                                         
             </div>
           </div>
       </div>            
