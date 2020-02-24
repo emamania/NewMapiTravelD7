@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'icon-trenes';
+    src: url('../fonts/icon-trenes.eot?m7na3');
+    src:  url('../fonts/icon-trenes.eot?m7na3#iefix') format('embedded-opentype'),
+      url('../fonts/icon-trenes.ttf?m7na3') format('truetype'),
+      url('../fonts/icon-trenes.woff?m7na3') format('woff'),
+      url('../fonts/icon-trenes.svg?m7na3#icon-trenes') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  [class^="trenes-"], [class*=" trenes-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icon-trenes' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .trenes-directions_bus:before {
+    content: "\e908";
+  }
+  .trenes-directions_railway:before {
+    content: "\e900";
+  }
+  .trenes-event_seat:before {
+    content: "\e901";
+  }
+  .trenes-local_bar:before {
+    content: "\e902";
+  }
+  .trenes-local_drink:before {
+    content: "\e903";
+  }
+  .trenes-music_note:before {
+    content: "\e904";
+  }
+  .trenes-restaurant:before {
+    content: "\e905";
+  }
+  .trenes-smartphone:before {
+    content: "\e906";
+  }
+  .trenes-terrain:before {
+    content: "\e907";
+  }
