@@ -16,6 +16,8 @@
 	overflow: hidden;
 	position: fixed;  
 	top: 0;
+	/* top: 140px;
+	background: #000; */
 	z-index: 3 !important;
 	font: bold 13px Tahoma, Geneva, sans-serif;
 }
@@ -44,6 +46,10 @@
 }
 #contact-bar a {
 	color: #fff;
+}
+#contact-bar .span {
+    font-size: 11px;
+    color: #ffd663 !important;
 }
 #contact-bar li:hover {
 	color: #bef6f8;
@@ -86,7 +92,10 @@
 	height: 45px;
 	animation: rotarwpp .5s linear infinite alternate;
 }
-#cb-mail {
+.cb-mail .p {
+    line-height: 14px;
+	margin: 0;
+	font-weight: bold;
 }
 #cb-socials {
 	height: 50px;
@@ -127,37 +136,74 @@
 	display: block;
 }
 
-#cb-award {
-	height: 50px;/* 
-	display: flex!important;
-    justify-content: center;
-    align-items: center; */
-}
-#cb-award a {
+
+#contact_bar .cb-chat_ico, #contact_bar .cb-whats_b, #contact_bar .cb-whats_ico, #contact_bar .cb-call_ico, #contact_bar .cb-award_ico {
+	background: url(../images/sprt-images.png);
+	height: 45px;
+	width: 40px;
 	display: block;
-	text-align: center;
 }
-#cb-award .img-award {
-	background: url(images/cb-award.png) no-repeat;
-	width: 20px;
-	height: 27px;
+.cb-call_ico, .cb-award_ico, .ban_br, .ban_en, .ban_es {
+	background: url(./images/sprt-images.png);
+	height: 45px;
+	width: 40px;
 	display: block;
-	background-size: 70%;
-	margin: auto;
-	margin-top: .2em;
 }
-#cb-call {
-	display: flex!important;
-	justify-content: center;
-	align-items: center;
-	width: 122px;
-    height: 42px;
-	background: url(images/cb-icon-call.png) no-repeat -4px 4px;	
+.cb-call a {
+    display: flex;
+    align-items: center;
 }
-#cb-call div {
-	padding-left: 35px;
+.cb-call .cb-call_ico {
+    background-position: 164px 0;
+    height: 45px;
+    width: 30px;
 }
+.cb-call span {
+	color: #fff !important;
+}
+
+.cb-award {
+    text-align: center;
+}
+.cb-award a {
+    display: block;
+    width: 22px;
+    margin: 0 auto;
+}
+.cb-award_ico {
+    background-position: 114px -7px;
+    height: 30px;
+    width: 22px;
+}
+
 #cb-langs {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+#cb-langs a {
+    display: flex;
+    align-items: center;
+}
+#cb-langs .ban_en {
+    background-position: 40px 0;
+    height: 22px;
+}
+#cb-langs .ban_br {
+    background-position: 82px -23px;
+    height: 22px;
+}
+#cb-langs .ban_es {
+	background-position: 82px 0;
+	height: 42px;
+}
+
+
+
+
+
+
+/* #cb-langs {
 	font-size: 11px !important;
 	line-height: 17px !important;
 	padding: 8px 0!important;
@@ -167,9 +213,11 @@
 	font-size: 11px;
 	margin: 0;
 	padding: 0;
-	color: #ffd663  !important;
+	color: #ffd663;
 }
-/* Idiomas */
+
+
+
 .idiomas {
 	text-align:left;
 	padding-top:10px;
@@ -190,7 +238,7 @@
 }
 .idiomas em.ban_es {
 	background: url(images/ban_es.png) no-repeat;
-}
+} */
 /* For Mapi2012 Theme */
 #main {}
 .page-admin #contact-bar {

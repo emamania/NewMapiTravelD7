@@ -27,6 +27,10 @@ define('MAPIBAR_WHATSAPP', '+51984630919, +51984983720');
  */
 define('MAPIBAR_MAIL', 'info@machupicchu.biz,machupicchutravel@hotmail.com');
 
+/**
+ * Responsabilidad Social
+ */
+define('MAPIBAR_RSOCIAL', '/agencia-de-viajes-y-turismo-con-responsabilidad-social');
 
 
 /**
@@ -103,9 +107,6 @@ function mapibar_init() {
 	  if ($setting = variable_get('mapibar_whatsapp', MAPIBAR_WHATSAPP)) {
       drupal_add_js(array('mapibar' => array('whatsapp' => $setting)), 'setting');
     }
-    /*++++ if ($setting = variable_get('mapibar_call', MAPIBAR_CALL)) {
-      drupal_add_js(array('mapibar' => array('call' => $setting)), 'setting');
-    } */
     
 } // function mapibar_init()
 
@@ -181,6 +182,14 @@ function mapibar_admin() {
     '#required' => TRUE,
   );
 
+  $form['contact']['mapibar_rsocial'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Responsabilidad Social URL'),
+    '#default_value' => variable_get('mapibar_rsocial', MAPIBAR_RSOCIAL),
+    '#description' => t("Only url RS, no spaces."),
+    '#required' => TRUE,
+  );
+
   $form['contact']['mapibar_premio'] = array(
     '#type' => 'textfield',
     '#title' => t('Premio URL'),
@@ -229,24 +238,6 @@ function mapibar_admin() {
     '#required' => TRUE,
   );
 
-  $form['variables']['mapibar_skype'] = array(
-    '#type' => 'textfield',
-    '#title' => t('URL for Skype window'),
-    '#size' => 60,
-    '#default_value' => variable_get('mapibar_skype', MAPIBAR_SKYPE),
-    '#maxlength' => 300,
-    '#required' => TRUE,
-  );
-
-  $form['variables']['mapibar_call'] = array(
-    '#type' => 'textfield',
-    '#title' => t('URL for call free window'),
-    '#size' => 60,
-    '#default_value' => variable_get('mapibar_call', MAPIBAR_CALL),
-    '#maxlength' => 300,
-    '#required' => TRUE,
-  );
-
   $form['variables']['mapibar_width'] = array(
     '#type' => 'textfield',
     '#title' => t('The bar width in px'),
@@ -260,7 +251,7 @@ function mapibar_admin() {
   $form['languages']['en']['mapibar_en_url'] = array(
     '#type' => 'textfield',
     '#title' => t('URL for english site (Optional)'),
-    '#default_value' => variable_get('mapibar_en_url', 'http://www.machupicchutravelagency.com'),
+    '#default_value' => variable_get('mapibar_en_url', 'https://www.machupicchutravelagency.com'),
   );
   $form['languages']['en']['mapibar_en_title'] = array(
     '#type' => 'textfield',
@@ -271,7 +262,7 @@ function mapibar_admin() {
   $form['languages']['br']['mapibar_br_url'] = array(
     '#type' => 'textfield',
     '#title' => t('URL for portuguese site (Optional)'),
-    '#default_value' => variable_get('mapibar_br_url', 'http://brasil.machupicchu.biz'),
+    '#default_value' => variable_get('mapibar_br_url', 'https://brasil.machupicchu.biz'),
   );
   $form['languages']['br']['mapibar_br_title'] = array(
     '#type' => 'textfield',
@@ -282,7 +273,7 @@ function mapibar_admin() {
   $form['languages']['es']['mapibar_es_url'] = array(
     '#type' => 'textfield',
     '#title' => t('URL for spanish site (Optional)'),
-    '#default_value' => variable_get('mapibar_es_url', 'http://www.machupicchu.biz'),
+    '#default_value' => variable_get('mapibar_es_url', 'https://www.machupicchu.biz'),
   );
   $form['languages']['es']['mapibar_es_title'] = array(
     '#type' => 'textfield',
@@ -323,10 +314,17 @@ function mapibar_page_build(&$page) {
         <ul>
         <li id="cb-chat"><div class="cb-chat"></div><div>%s</div></li>
         <li id="cb-whatsapp"><a href="https://wa.me/51984630919?text=Hola, est@y interesado en:" target="blank"><div class="wpp-bg"><div class="phone"></div></div><div>%s %s</div></a></li>
-        <li id="cb-mail"><span>%s</span><br />%s</li>
-        <li id="cb-call"><div>%s</div></li>
+        <li class="cb-mail"><span class="span">%s</span><p class="p"><span>%s</span></p></li>
+        <li class="cb-call">
+          
+          <a target="_blank" href="%s" rel="nofollow">
+              <div class="cb-call_ico"></div>
+              <span>%s</span>
+          </a>
+        
+        </li>
 
-        <li id="cb-socials"><span>%s</span>
+        <li id="cb-socials"><span class="span">%s</span>
           <ul>
             <li>
                 <a href="%s" target="_blank" rel="nofollow">
@@ -351,14 +349,15 @@ function mapibar_page_build(&$page) {
           </ul>      
         </li>
 
-        <li id="cb-award"><span>%s</span><a href="%s" target="_blank"><span class="img-award"></span></a></li>
+        <li class="cb-award"><span class="span">%s</span><a href="%s" target="_blank"><span class="cb-award_ico"></span></a></li>
         <li id="cb-langs" class="idiomas last">',
             t('Chatea con nosotros'),
             t(''),
               mapibar_joiner(variable_get('mapibar_whatsapp', MAPIBAR_WHATSAPP)),            
             t('Book 24 hours'),
             mapibar_joiner(variable_get('mapibar_mail', MAPIBAR_MAIL)),
-            t('Nosotros te llamamos'),
+            mapibar_joiner(variable_get('mapibar_rsocial', MAPIBAR_RSOCIAL)),
+            t('Responsabilidad Social'),
             t('Redes Sociales'),
               mapibar_joiner_socials(variable_get('mapibar_socials_f', MAPIBAR_SOCIAL_F)),
               mapibar_joiner_socials(variable_get('mapibar_socials_t', MAPIBAR_SOCIAL_T)),
@@ -368,32 +367,32 @@ function mapibar_page_build(&$page) {
               mapibar_joiner(variable_get('mapibar_premio', MAPIBAR_PREMIO)));
         switch($language->language) {
           case 'es':
-            $output .= sprintf('<a href="%s" title="%s"><em class="ban_en">%s</a></em><br />
-            <a href="%s" title="%s"><em class="ban_br">%s</a></em>',
-                                                  variable_get('mapibar_en_url', 'http://www.machupicchutravelagency.com/'),
+            $output .= sprintf('<a href="%s" title="%s"><div class="ban_en"></div><span>%s</span></a>
+            <a href="%s" title="%s"><div class="ban_br"></div><span>%s</span></a>',
+                                                  variable_get('mapibar_en_url', 'https://www.machupicchutravelagency.com/'),
                                                   variable_get('mapibar_en_title'),
                                                   t('EN'),
-                                                  variable_get('mapibar_br_url', 'http://brasil.machupicchu.biz/'),
+                                                  variable_get('mapibar_br_url', 'https://brasil.machupicchu.biz/'),
                                                   variable_get('mapibar_br_title'),
                                                   t('PT'));
           break;
           case 'en':
-                                          $output .= sprintf('<a href="%s" title="%s"><em class="ban_br">%s</a></em><br />
-            <a href="%s" title="%s"><em class="ban_es">%s</a></em>',
-                                                  variable_get('mapibar_br_url', 'http://brasil.machupicchu.biz/'),
+                                          $output .= sprintf('<a href="%s" title="%s"><div class="ban_br"></div><span>%s</span></a>
+            <a href="%s" title="%s"><div class="ban_es"></div><span>%s</span></a>',
+                                                  variable_get('mapibar_br_url', 'https://brasil.machupicchu.biz/'),
                                                   variable_get('mapibar_br_title'),
                                                   t('PT'),
-                                                  variable_get('mapibar_es_url', 'http://www.machupicchu.biz/'),
+                                                  variable_get('mapibar_es_url', 'https://www.machupicchu.biz/'),
                                                   variable_get('mapibar_es_title'),
                                                   t('SP'));
           break;
           default:
-                                          $output .= sprintf('<a href="%s" title="%s"><em class="ban_en">%s</a></em><br />
-            <a href="%s" title="%s"><em class="ban_es">%s</a></em>',
-                                                  variable_get('mapibar_en_url', 'http://www.machupicchutravelagency.com/'),
+                                          $output .= sprintf('<a href="%s" title="%s"><div class="ban_en"></div><span>%s</span></a>
+            <a href="%s" title="%s"><div class="ban_es"></div><span>%s</span></a>',
+                                                  variable_get('mapibar_en_url', 'https://www.machupicchutravelagency.com/'),
                                                   variable_get('mapibar_en_title'),
                                                   t('EN'),
-                                                  variable_get('mapibar_es_url', 'http://www.machupicchu.biz/'),
+                                                  variable_get('mapibar_es_url', 'https://www.machupicchu.biz/'),
                                                   variable_get('mapibar_es_title'),
                                                   t('SP'));
         }
