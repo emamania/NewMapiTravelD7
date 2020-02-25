@@ -14,7 +14,7 @@
         /* API YOUT */
         var nextPageToken = "";
         // Resultados por pagina
-        var resPorPagina = 2;
+        var resPorPagina = 3;
         // Paginas a mostrar
         var paginas = 1;
         var key = "AIzaSyA5NNB32Uq3Ah7YkQQ_R5Fl2xGDaei5Z9I";

@@ -203,6 +203,17 @@ body {
 				}
 			}
 		}
+
+		.grid-yt {
+			display: grid;
+			grid-template-columns: repeat(1,1fr);
+			grid-gap: .5rem;
+
+			@include fromin(md){
+				grid-template-columns: repeat(3,1fr);
+				grid-gap: 2rem;
+			}
+		}
 	}
 	.info-iconos {
 		display: flex;
