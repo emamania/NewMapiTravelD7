@@ -1,0 +1,145 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto; }
+
+/* Hide the images by default */
+.mySlides {
+  display: none; }
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  -webkit-transition: 0.6s ease;
+  -o-transition: 0.6s ease;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: var(--z-normal); }
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px; }
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8); }
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center; }
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0; }
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-transition: background-color 0.6s ease;
+  -o-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease; }
+
+.active, .dot:hover {
+  background-color: #717171; }
+
+/**
+    EMA SLIDER CON CSS + JAVA SCRIPT
+
+*/
+h2 {
+  margin: 0; }
+
+.emaslidecontent {
+  width: 100%;
+  position: relative;
+  overflow: hidden; }
+
+.emaslider {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .emaslider-items {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-negative: 0;
+    flex-shrink: 0; }
+    .emaslider-items > .data {
+      position: absolute;
+      text-align: center; }
+      .emaslider-items > .data h2, .emaslider-items > .data a {
+        color: var(--white); }
+      .emaslider-items > .data h2 {
+        font-size: 4rem;
+        margin-bottom: 2rem;
+        text-shadow: var(--text-shadow3); }
+      .emaslider-items > .data a {
+        -webkit-box-shadow: var(--box-shadow3);
+        box-shadow: var(--box-shadow3);
+        padding: .7rem 2rem;
+        background: var(--primary-color);
+        border-radius: 2rem;
+        display: block; }
+    .emaslider-items > img {
+      width: 100%;
+      display: block; }
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s; }
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
+
+@keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
