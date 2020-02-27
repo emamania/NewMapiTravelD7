@@ -56,8 +56,16 @@ header.header-area {
                 text-align: center;
                 transition: background .4s ease;
                 //padding: .5rem 1vw;
-                &:nth-child(5) {
+                &:nth-child(6) {
                     width: 170px;
+                }
+                &:last-child:hover{
+                    background: none;
+                }
+                a.btn-yout {
+                    margin: 0;
+                    padding: .2rem .9rem;
+                    text-transform: none;
                 }
                 .link {
                     display: block;

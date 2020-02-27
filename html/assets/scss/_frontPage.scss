@@ -30,6 +30,28 @@ body {
 	}
 }
 
+.certi, .noti {
+	background: #fff;
+}
+.awards {
+	background: #f3f3f3;
+} 
+
+.heading {
+	width: 75%;
+	margin: 0 auto;
+	text-align: center;
+	h2 {
+		color: var(--primary-color);
+		text-transform: uppercase;
+		margin: 0 0 1.5rem 0;
+	}
+	p {
+		line-height: 1.5rem;
+    	font-weight: normal;
+	}
+}
+
 /* MOVIE AREA */
 .overlay {
 	background: #000;
@@ -73,21 +95,8 @@ body {
 		}
 	}
 }
-.heading {
-	width: 75%;
-	margin: 0 auto;
-	text-align: center;
-	h2 {
-		color: var(--primary-color);
-		text-transform: uppercase;
-		margin: 0 0 1.5rem 0;
-	}
-	p {
-		line-height: 1.5rem;
-    	font-weight: normal;
-	}
-}
-.sharebar {
+
+/* .sharebar {
 	position: absolute;
 	left: 10px;
 	position: fixed;
@@ -105,7 +114,9 @@ body {
 			}
 		}
 	}
-}
+} */
+
+/*  TOURS MAS VENDIDOS   */
 .main-area {
 	background: #fff;
 	/* CONTENT AREA */
@@ -137,6 +148,7 @@ body {
 			}
 		}
 		
+		// ARTICLE INFORMACION DE TOURS
 		.blog-post {
 			br {
 				display: none;
@@ -188,33 +200,10 @@ body {
 				}
 			}
 		}
-		.info {
-			p.title, p {
-				color: var(--primary-color);
-				&:first-child {
-					font-size: 1.4rem;
-					font-weight: 600;
-				}
-				&:last-child {
-					font-size: 1rem;
-					color: var(--dark);
-					line-height: 1.5rem;
-					font-weight: normal;
-				}
-			}
-		}
-
-		.grid-yt {
-			display: grid;
-			grid-template-columns: repeat(1,1fr);
-			grid-gap: .5rem;
-
-			@include fromin(md){
-				grid-template-columns: repeat(3,1fr);
-				grid-gap: 2rem;
-			}
-		}
+		
 	}
+
+	/* NOSOTROS ICONOS*/
 	.info-iconos {
 		display: flex;
 		justify-content: space-evenly;
@@ -229,11 +218,10 @@ body {
 		}
 	}
 }
-.awards, .certi {
-	background: #fff;
-}	
 
-.categ {
+/* CATEGORIAS POR DEFINIR VER CODIGO */
+
+.categ, .blog {
 	background: var(--yellow);
 }
 
@@ -356,8 +344,53 @@ body {
 	}
 }
 
-.blog {
-	background: #fff;
+	
+
+/* TESTIMONIOS YOUTUBE */
+.reviewsyt {
+	background: var(--white);
+	.info {
+		&-c2 {
+			display: flex;
+			justify-content: space-between;
+			.title {
+				font-size: 1.5rem;
+				font-weight: 600;
+				color: var(--primary-color);
+				text-transform: uppercase;
+			}
+		}
+		.title, p {
+			color: var(--primary-color);
+			&:first-child {
+				font-size: 1.4rem;
+				font-weight: 600;
+			}
+			&:last-child {
+				font-size: 1rem;
+				color: var(--dark);
+				line-height: 1.5rem;
+				font-weight: normal;
+			}
+		}
+		
+	}
+
+	.grid-yt {
+		display: grid;
+		grid-template-columns: repeat(1,1fr);
+		grid-gap: .5rem;
+
+		@include fromin(md){
+			grid-template-columns: repeat(3,1fr);
+			grid-gap: 2rem;
+		}
+	}
+}
+
+
+.blog, .noti {
+	//background: #f3f3f3;
 	article {
 		position: relative;
 		background: var(--light);
