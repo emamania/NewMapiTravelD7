@@ -80,13 +80,13 @@ regions[footer]             = Footer
 
 ; Front Page Regions
 
+regions[menu]               = MegaMenu
 regions[videoSli]           = Video o Slider
-regions[welcome]            = Welcome
-regions[sharebar]           = Share Bar
-regions[tours]              = Tours
-regions[aside]              = Aside Tour
+regions[tours]              = Seccion Tours
 regions[Categoriatours]     = categoria Tours
-regions[articulosblog]      = Articulos Blog
+regions[testimonio]         = Testimonios
+regions[articulosblog]      = Articulos
+regions[noticias]           = Noticias
 regions[redessociales]      = Redes Sociales
 regions[mapaempresa]        = Mapa de Empresa
 regions[Certificados]       = Certificados

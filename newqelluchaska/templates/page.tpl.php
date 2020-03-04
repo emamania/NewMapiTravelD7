@@ -73,85 +73,18 @@
 <style>body{background: #fff};</style>
 <header class="header-area">
   <div class="emagrid">
-        <nav class="nav">
-            <a class="whatsnav" href="https://api.whatsapp.com/send?phone=51984630919&text=Hola Machupicchu Travel. Me gustaría información sobre." rel="nofollow">
-                <img src="https://www.machupicchu.biz/imagenes/iconos/whatsapp.png" alt="Whatsapp">
-            </a>
-            <a href="<?php print $front_page; ?> " rel="home" class="link nav-brand text-light">
-                <img src="./sites/all/themes/newqelluchaska/assets/images/logo.png" alt="<?php print $site_name; ?>">
-            </a>
-            <!-- toggle menu -->
-            <button class="toggle-button">
-                <i class="fas fa-bars"></i>
-            </button>
-
-          <!-- navigation items -->
-          <div class="collapse" id="toggle-collapse">
-              <ul class="navbar-nav">
-                  <li class="nav-link">
-                      <a href="#" class="link text-light">Top Tours en Perú</a>
-                      <ul class="subnavbar-nav">
-                          <li><a href="single.html">Tours de 8 a mapi</a></li>
-                          <li><a href="single.html">Tours de 7 a mapi</a></li>
-                          <li><a href="single.html">Tours de 6 a mapi</a></li>
-                          <li><a href="single.html">Tours de 5 a mapi</a></li>
-                          <li><a href="single.html">Tours de 4 a mapi</a></li>
-                      </ul>
-                  </li>
-                  <li class="nav-link">
-                      <a href="#" class="link text-light">Tours de Aventura</a>
-                      <ul class="subnavbar-nav">
-                          <li><a href="single.html">Camino Inca</a></li>
-                          <li><a href="single.html">Salkantay</a></li>
-                          <li><a href="single.html">Globo</a></li>
-                          <li><a href="single.html">Parapente</a></li>
-                          <li><a href="single.html">choquequirao</a></li>
-                          <li><a href="single.html">Lares</a></li>
-                          <li><a href="single.html">Canotaje</a></li>
-                          <li><a href="single.html">Ciclismo</a></li>
-                      </ul>
-                  </li>
-                  <li class="nav-link">
-                      <a href="#" class="link text-light">Lugares Turisticos</a>
-                  </li>
-                  <li class="nav-link">
-                      <a href="#" class="link text-light">Tours a Sudamerica</a>
-                  </li>
-                  <li class="nav-link">
-                      <a href="#" class="link text-light">Tours full day</a>
-                      <ul class="subnavbar-nav">
-                          <li><a href="single.html">Machu Picchu 1 dia</a></li>
-                          <li><a href="single.html">Cerro de 7 Colores</a></li>
-                          <li><a href="single.html">Humantay</a></li>
-                          <li><a href="single.html">Maras Moray</a></li>
-                          <li><a href="single.html">Valle Sagrado</a></li>
-                          <li><a href="single.html">Inti Raymi</a></li>
-                          <li><a href="single.html">Cusco</a></li>
-                          <li><a href="single.html">Arequipa</a></li>
-                          <li><a href="single.html">Lima</a></li>
-                          <li><a href="single.html">Puno</a></li>
-                      </ul>
-                  </li>
-                  <li class="nav-link">
-                      <a href="#" class="link text-light">Turismo Comunitario</a>
-                  </li>
-                  <!-- <li class="nav-link">
-                      <a href="#" class="link text-light">Tours a Sudamerica</a>
-                  </li> -->
-              </ul>                    
-          </div>
-      </nav>
+    <?php print render($page['menu']); ?> 
   </div>
 </header>
 <section class="banner-area">
     <div class="container-fluid">
         <div class="banner">
-            <img src="../sites/all/themes/newqelluchaska/assets/images/machu1.jpg" alt="Entrada a Machupicchu" class="fluid" style="max-height: 350px;object-fit: cover;">
+            <img src="../sites/all/themes/NewMapiTravelD7/newqelluchaska/assets/images/banner2.jpg" alt="Entrada a Machupicchu" class="fluid" style="max-height: 350px;object-fit: cover;">
         </div>
         <div class="banner-title text-center">
             <?php if ($title): ?>
               <?php print render($title_prefix); ?>
-              <h1 class="text-lg text-light">Bienvenido a <?php print $site_name ?></h1>
+              <!-- <h1 class="text-lg text-light">Bienvenido a <php print $site_name ?></h1> -->
               <?php print render($title_suffix); ?>
             <?php endif; ?>
             <?php if ($site_slogan): ?>

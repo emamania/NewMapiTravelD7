@@ -72,90 +72,11 @@
 ?>
 <header class="header-area">
   <div class="emagrid">
-        <nav class="nav">
-            <a class="whatsnav" href="https://api.whatsapp.com/send?phone=51984630919&text=Hola Machupicchu Travel. Me gustaría información sobre." rel="nofollow">
-                <img src="https://www.machupicchu.biz/imagenes/iconos/whatsapp.png" alt="Whatsapp">
-            </a>
-            <a href="<?php print $front_page; ?> " rel="home" class="link nav-brand text-light">
-                <img src="./sites/all/themes/newqelluchaska/assets/images/logo.png" alt="<?php print $site_name; ?>">
-            </a>
-            <!-- toggle menu -->
-            <button class="toggle-button">
-                <i class="fas fa-bars"></i>
-            </button>
-
-          <!-- navigation items -->
-          <div class="collapse" id="toggle-collapse">
-              <ul class="navbar-nav">
-                  <li class="nav-link">
-                      <a href="#" class="link text-light">Top Tours en Perú</a>
-                      <ul class="subnavbar-nav">
-                          <li><a href="single.html">Tours de 8 a mapi</a></li>
-                          <li><a href="single.html">Tours de 7 a mapi</a></li>
-                          <li><a href="single.html">Tours de 6 a mapi</a></li>
-                          <li><a href="single.html">Tours de 5 a mapi</a></li>
-                          <li><a href="single.html">Tours de 4 a mapi</a></li>
-                      </ul>
-                  </li>
-                  <li class="nav-link">
-                      <a href="#" class="link text-light">Tours de Aventura</a>
-                      <ul class="subnavbar-nav">
-                          <li><a href="single.html">Camino Inca</a></li>
-                          <li><a href="single.html">Salkantay</a></li>
-                          <li><a href="single.html">Globo</a></li>
-                          <li><a href="single.html">Parapente</a></li>
-                          <li><a href="single.html">choquequirao</a></li>
-                          <li><a href="single.html">Lares</a></li>
-                          <li><a href="single.html">Canotaje</a></li>
-                          <li><a href="single.html">Ciclismo</a></li>
-                      </ul>
-                  </li>
-                  <li class="nav-link">
-                      <a href="#" class="link text-light">Lugares Turisticos</a>
-                  </li>
-                  <li class="nav-link">
-                      <a href="#" class="link text-light">Tours a Sudamerica</a>
-                  </li>
-                  <li class="nav-link">
-                      <a href="#" class="link text-light">Tours full day</a>
-                      <ul class="subnavbar-nav">
-                          <li><a href="single.html">Machu Picchu 1 dia</a></li>
-                          <li><a href="single.html">Cerro de 7 Colores</a></li>
-                          <li><a href="single.html">Humantay</a></li>
-                          <li><a href="single.html">Maras Moray</a></li>
-                          <li><a href="single.html">Valle Sagrado</a></li>
-                          <li><a href="single.html">Inti Raymi</a></li>
-                          <li><a href="single.html">Cusco</a></li>
-                          <li><a href="single.html">Arequipa</a></li>
-                          <li><a href="single.html">Lima</a></li>
-                          <li><a href="single.html">Puno</a></li>
-                      </ul>
-                  </li>
-                  <li class="nav-link">
-                      <a href="#" class="link text-light">Turismo Comunitario</a>
-                  </li>
-                  <!-- <li class="nav-link">
-                      <a href="#" class="link text-light">Tours a Sudamerica</a>
-                  </li> -->
-              </ul>                    
-          </div>
-      </nav>
+    <?php print render($page['menu']); ?>    
   </div>
 </header>
-<div class="movie">
-    <div class="overlay">
-        <video class="video-agencia" width="100%" preload="auto" autoplay="true" muted="muted" loop="" playsinline="">
-            <source class="main-video" src="./sites/all/themes/NewMapiTravelD7/newqelluchaska/assets/images/videopromo.mp4" type="video/mp4">
-        </video>
-    </div>
-    <div class="movie_text">
-        <div class="emagrid">
-            <div class="row">
-                <h2 class="text-lg text-light">Tours a Machu Picchu</h2 class="text-light text-aling-center">
-                <p class="description text-sm text-light">Expertos en viajes de ensueño y tú, ¿cuándo cumplirás los tuyos?</p>
-            </div>
-        </div>
-    </div>
+<div class="videosli">
+  <?php print render($page['videoSli']); ?>
 </div>
 
 <main class="main-area">           
@@ -176,15 +97,7 @@
             <?php endif; ?>
           </div>
           <div class="lg-cols-12 md-cols-12">
-            <div id="welcome"><?php print render($page['welcome']); ?></div>
-          </div>
-          <div class="lg-cols-9 md-cols-12">
             <?php print render($page['tours']); ?>                                                   
-          </div>
-          <div class="lg-cols-3 md-cols-12">
-            <div class="md-cols-12">
-              <?php print render($page['aside']); ?>                                         
-            </div>
           </div>
       </div>            
   </section>                         
@@ -193,9 +106,18 @@
 <section class="categ s-py lg-py">  
   <?php print render($page['Categoriatours']); ?>   
 </section>
+<section class="reviewsyt s-py lg-py" id="testi">  
+    <?php print render($page['testimonio']); ?>
+</section>
 <section class="blog s-py lg-py">
   <?php print render($page['articulosblog']); ?>
 </section>
+<section class="noti s-py lg-py">
+  <?php print render($page['noticias']); ?>
+</section>
+
+
+
 <div class="awards s-py lg-py">
   <?php print render($page['redessociales']); ?>
 </div>

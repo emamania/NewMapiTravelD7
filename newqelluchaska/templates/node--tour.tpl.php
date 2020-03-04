@@ -83,8 +83,6 @@
  
   global $base_root;
   $path = $base_root . $node_url;
-
-  $field_image= $fields['field_imagen']->content;
 ?>
 
 <article id="node-<?php print $node->nid; ?>" class="node-<?php print $node->nid; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
@@ -98,10 +96,7 @@
     <?php endif; ?>
     <?php print render($title_suffix); ?>
     <div class="content"<?php print $content_attributes; ?>>
-      <section id="tour-bar">
-        <div>
-          <img src="<?php print $field_image?>" alt="<?php print $title; ?>">
-        </div>       
+      <section id="tour-bar">               
         
         <?php if(isset($field_en['und']) || isset($field_br['und'])) : ?>
         <div class="bar-langs">

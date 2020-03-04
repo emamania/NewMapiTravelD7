@@ -464,10 +464,14 @@ body {
 .adds {
 	position: relative;
 	display: block;
-	.adds-movie {
+	margin-top: 2.5rem!important;
+	& > a {
+		display: block;
+	}
+	& .adds-movie {
 		position: relative;
 		display: block;
-		p {
+		& > p {
 			position: absolute;
 			font-weight: 700;
 			font-size: 2rem;
@@ -478,14 +482,16 @@ body {
 			text-shadow: var(--box-shadow);
 			line-height: 2.1rem;
 			width: 100%;
+			display: block!important;
 		}
-		img {
+		& > img {
 			width: 100%!important;
-			display: block;
+			display: block!important;
+			float: none!important;
 		}
 
 	}
-	a.adds-btn {
+	& a.adds-btn {
 		&:last-child {
 			background: var(--primary-color);
 			text-decoration: none;
