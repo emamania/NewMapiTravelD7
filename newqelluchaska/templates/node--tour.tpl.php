@@ -95,31 +95,12 @@
     <?php print render($title_suffix); ?>
     <?php endif; ?>
     <?php print render($title_suffix); ?>
-    <div class="content"<?php print $content_attributes; ?>>
-      <section id="tour-bar">               
-        
-        <?php if(isset($field_en['und']) || isset($field_br['und'])) : ?>
-        <div class="bar-langs">
-          <h5><?php print t('Also available in:'); ?></h5>
-          <ul>
-            <?php if(isset($field_en['und'][0]['value'])) : ?>
-            <li><a href="<?php print $field_en['und'][0]['value'];?>"><img class="lang-en" src="http://media.perunoticias.net/images/iconos/flag-lang-en.png" /> <?php print t('English'); ?></a></li>
-            <?php endif; ?>
-            <?php if(isset($field_br['und'][0]['value'])) : ?>
-            <li><a href="<?php print $field_br['und'][0]['value'];?>"><img class="lang-br" src="http://media.perunoticias.net/images/iconos/flag-lang-br.png" /> <?php print t('Portuguese'); ?></a></li>
-            <?php endif; ?>
-            <?php if(isset($field_es['und'][0]['value'])) : ?>
-            <li><a href="<?php print $field_es['und'][0]['value'];?>"><img class="lang-br" src="http://media.perunoticias.net/images/iconos/flag-lang-br.png" /> <?php print t('Spanish'); ?></a></li>
-            <?php endif; ?>
-          </ul>
-        </div>
-        <?php endif; ?>
-      </section>
+    <div class="content"<?php print $content_attributes; ?>>      
       <?php
+      print render($content);
       // We hide the comments and links now so that we can render them later.
       hide($content['comments']);
       hide($content['links']);
-      print render($content);
     ?>
     </div>
     <div class="meta"> <?php print render($content['links']); ?> <?php print render($content['comments']); ?> </div>

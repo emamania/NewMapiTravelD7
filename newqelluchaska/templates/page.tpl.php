@@ -117,8 +117,7 @@
             <?php endif; ?>
             <?php if ($tabs): ?>
             <div class="tabs"><?php print render($tabs); ?></div>
-            <?php endif; ?>
-            <div class="sharebar"><?php print render($page['sharebar']); ?></div> 
+            <?php endif; ?> 
             <?php print render($page['content']); ?>
           </div>
         </div>
