@@ -1,3 +1,9 @@
+window.onload = function() {
+    //let myiFrame = document.getElementById("if");
+    document.getElementById("if").style.height="100vw";
+    document.getElementById("if").style.width="100%";    
+    /* doc.body.innerHTML = doc.body.innerHTML + '<style>height: 50vw;width: 100%;border: 0;display: block;</style>'; */
+}
 (function($) {   
     
     //Drupal.behaviors.
